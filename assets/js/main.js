@@ -17,32 +17,32 @@ const teamMembers = [
     {
         name: 'Ratallo',
         role: 'God aimer',
-        photo: '',
+        photo: './assets/img/wayne-barnett-founder-ceo.jpg',
     },
     {
         name: 'Alegandro',
         role: 'Almost god aimer',
-        photo: '',
+        photo: './assets/img/angela-caroll-chief-editor.jpg',
     },
     {
         name: 'Lookas',
         role: 'Bot a pedali',
-        photo: '',
+        photo: './assets/img/angela-lopez-social-media-manager.jpg',
     },
     {
         name: 'Kolen',
         role: 'Stella nascente',
-        photo: '',
+        photo: './assets/img/scott-estrada-developer.jpg',
     },
     {
         name: 'Paolino',
         role: 'Motivatore',
-        photo: '',
+        photo: './assets/img/walter-gordon-office-manager.jpg',
     },
     {
         name: 'Giamma',
         role: 'Bot senza pedali',
-        photo: '',
+        photo: './assets/img/barbara-ramos-graphic-designer.jpg',
     },
 ]
 
@@ -51,5 +51,20 @@ console.log(teamMembers);
 for (let i = 0; i < teamMembers.length; i++) {
     const teamMember = teamMembers[i];
     console.log(teamMember);
-    
+
+    const rowElement = document.querySelector('.row')
+
+    const markup = `
+    <div class="col-4">
+    <div class="card my-3">
+    <img src="${teamMember.photo}" class="card-img-top" alt="">
+    <div class="card-body">
+        <h5 class="card-title">${teamMember.name}</h5>
+        <p class="card-text">${teamMember.role}</p>
+    </div>
+    </div>
+    </div>
+`
+
+    rowElement.innerHTML += markup
 }
