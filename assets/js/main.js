@@ -47,3 +47,9 @@ const teamMembers = [
 ]
 
 console.log(teamMembers);
+
+for (let i = 0; i < teamMembers.length; i++) {
+    const teamMember = teamMembers[i];
+    console.log(teamMember);
+    
+}
